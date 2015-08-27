@@ -7,12 +7,12 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <SplitView x:Name="MainSplitView" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="50" OpenPaneLength="150">
+    <SplitView x:Name="MainSplitView" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="50" OpenPaneLength="225">
         <SplitView.Pane>
             <StackPanel Background="Gray">
                 <Button x:Name="HamburgerButton" FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
                      Width="50" Height="50" Background="Transparent" Click="HamburgerButton_Click"/>
-                <ListView x:Name="HamburgerList">
+                <ListView x:Name="HamburgerList" Foreground="White">
                     <ListViewItem Padding="0" x:Name="Home">
                         <StackPanel Orientation="Horizontal">
                             <Button x:Name="MenuButton2" FontFamily="Segoe MDL2 Assets" Content="&#xE10F;"
@@ -20,11 +20,137 @@
                             <TextBlock Text="Button 2" FontSize="18" VerticalAlignment="Center" />
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem Padding="0" x:Name="Microphone">
+                    <ListViewItem Padding="0" x:Name="Map">
                         <StackPanel Orientation="Horizontal">
                             <Button x:Name="MenuButton3" FontFamily="Segoe MDL2 Assets" Content="&#xE1D6;"
                         Width="50" Height="50" Background="Transparent" Click="Item2Click"/>
-                            <TextBlock Text="Button 3" FontSize="18" VerticalAlignment="Center" />
+                            <TextBlock Text="Map" FontSize="18" VerticalAlignment="Center" />
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Padding="0" x:Name="Portal">
+                        <StackPanel Orientation="Horizontal">
+                            <Button x:Name="MenuButton4" FontFamily="Segoe MDL2 Assets" Content="&#xE1D6;"
+                        Width="50" Height="50" Background="Transparent" Click="Item2Click"/>
+                            <TextBlock Text="Portal" FontSize="18" VerticalAlignment="Center" />
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Padding="0" x:Name="PolyCard">
+                        <StackPanel Orientation="Horizontal">
+                            <Button x:Name="MenuButton5" FontFamily="Segoe MDL2 Assets" Content="&#xE1D6;"
+                        Width="50" Height="50" Background="Transparent" Click="Item2Click"/>
+                            <TextBlock Text="PolyCard" FontSize="18" VerticalAlignment="Center" />
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Padding="0" x:Name="EscortVan">
+                        <StackPanel Orientation="Horizontal">
+                            <Button x:Name="MenuButton6" FontFamily="Segoe MDL2 Assets" Content="&#xE1D6;"
+                        Width="50" Height="50" Background="Transparent" Click="Item2Click"/>
+                            <TextBlock Text="Escort Van" FontSize="18" VerticalAlignment="Center" />
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Padding="0" x:Name="Dining">
+                        <StackPanel Orientation="Horizontal">
+                            <Button x:Name="MenuButton7" FontFamily="Segoe MDL2 Assets" Content="&#xE1D6;"
+                        Width="50" Height="50" Background="Transparent" Click="Item2Click"/>
+                            <TextBlock Text="Dining" FontSize="18" VerticalAlignment="Center" />
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Padding="0" x:Name="Recreation">
+                        <StackPanel Orientation="Horizontal">
+                            <Button x:Name="MenuButton8" FontFamily="Segoe MDL2 Assets" Content="&#xE1D6;"
+                        Width="50" Height="50" Background="Transparent" Click="Item2Click"/>
+                            <TextBlock Text="Recreation" FontSize="18" VerticalAlignment="Center" />
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Padding="0" x:Name="Safety">
+                        <StackPanel Orientation="Horizontal">
+                            <Button x:Name="MenuButton9" FontFamily="Segoe MDL2 Assets" Content="&#xE1D6;"
+                        Width="50" Height="50" Background="Transparent" Click="Item2Click"/>
+                            <TextBlock Text="Safety" FontSize="18" VerticalAlignment="Center" />
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Padding="0" x:Name="News">
+                        <StackPanel Orientation="Horizontal">
+                            <Button x:Name="MenuButton10" FontFamily="Segoe MDL2 Assets" Content="&#xE1D6;"
+                        Width="50" Height="50" Background="Transparent" Click="Item2Click"/>
+                            <TextBlock Text="News" FontSize="18" VerticalAlignment="Center" />
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Padding="0" x:Name="BikeRacks">
+                        <StackPanel Orientation="Horizontal">
+                            <Button x:Name="MenuButton11" FontFamily="Segoe MDL2 Assets" Content="&#xE1D6;"
+                        Width="50" Height="50" Background="Transparent" Click="Item2Click"/>
+                            <TextBlock Text="Bike Racks" FontSize="18" VerticalAlignment="Center" />
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Padding="0" x:Name="Events">
+                        <StackPanel Orientation="Horizontal">
+                            <Button x:Name="MenuButton12" FontFamily="Segoe MDL2 Assets" Content="&#xE1D6;"
+                        Width="50" Height="50" Background="Transparent" Click="Item2Click"/>
+                            <TextBlock Text="Events" FontSize="18" VerticalAlignment="Center" />
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Padding="0" x:Name="Admissions">
+                        <StackPanel Orientation="Horizontal">
+                            <Button x:Name="MenuButton13" FontFamily="Segoe MDL2 Assets" Content="&#xE1D6;"
+                        Width="50" Height="50" Background="Transparent" Click="Item2Click"/>
+                            <TextBlock Text="Admissions" FontSize="18" VerticalAlignment="Center" />
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Padding="0" x:Name="Athletics">
+                        <StackPanel Orientation="Horizontal">
+                            <Button x:Name="MenuButton14" FontFamily="Segoe MDL2 Assets" Content="&#xE1D6;"
+                        Width="50" Height="50" Background="Transparent" Click="Item2Click"/>
+                            <TextBlock Text="Admissions" FontSize="18" VerticalAlignment="Center" />
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Padding="0" x:Name="Directory">
+                        <StackPanel Orientation="Horizontal">
+                            <Button x:Name="MenuButton15" FontFamily="Segoe MDL2 Assets" Content="&#xE1D6;"
+                        Width="50" Height="50" Background="Transparent" Click="Item2Click"/>
+                            <TextBlock Text="Directory" FontSize="18" VerticalAlignment="Center" />
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Padding="0" x:Name="UniversityStore">
+                        <StackPanel Orientation="Horizontal">
+                            <Button x:Name="MenuButton16" FontFamily="Segoe MDL2 Assets" Content="&#xE1D6;"
+                        Width="50" Height="50" Background="Transparent" Click="Item2Click"/>
+                            <TextBlock Text="University Store" FontSize="18" VerticalAlignment="Center" />
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Padding="0" x:Name="CampusLife">
+                        <StackPanel Orientation="Horizontal">
+                            <Button x:Name="MenuButton17" FontFamily="Segoe MDL2 Assets" Content="&#xE1D6;"
+                        Width="50" Height="50" Background="Transparent" Click="Item2Click"/>
+                            <TextBlock Text="Campus Life" FontSize="18" VerticalAlignment="Center" />
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Padding="0" x:Name="Library">
+                        <StackPanel Orientation="Horizontal">
+                            <Button x:Name="MenuButton18" FontFamily="Segoe MDL2 Assets" Content="&#xE1D6;"
+                        Width="50" Height="50" Background="Transparent" Click="Item2Click"/>
+                            <TextBlock Text="Library" FontSize="18" VerticalAlignment="Center" />
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Padding="0" x:Name="PrintandCopy">
+                        <StackPanel Orientation="Horizontal">
+                            <Button x:Name="MenuButton19" FontFamily="Segoe MDL2 Assets" Content="&#xE1D6;"
+                        Width="50" Height="50" Background="Transparent" Click="Item2Click"/>
+                            <TextBlock Text="Print and Copy" FontSize="18" VerticalAlignment="Center" />
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Padding="0" x:Name="MustangJobs">
+                        <StackPanel Orientation="Horizontal">
+                            <Button x:Name="MenuButton20" FontFamily="Segoe MDL2 Assets" Content="&#xE1D6;"
+                        Width="50" Height="50" Background="Transparent" Click="Item2Click"/>
+                            <TextBlock Text="Mustang Jobs" FontSize="18" VerticalAlignment="Center" />
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Padding="0" x:Name="About">
+                        <StackPanel Orientation="Horizontal">
+                            <Button x:Name="MenuButton21" FontFamily="Segoe MDL2 Assets" Content="&#xE1D6;"
+                        Width="50" Height="50" Background="Transparent" Click="Item2Click"/>
+                            <TextBlock Text="About" FontSize="18" VerticalAlignment="Center" />
                         </StackPanel>
                     </ListViewItem>
                 </ListView>

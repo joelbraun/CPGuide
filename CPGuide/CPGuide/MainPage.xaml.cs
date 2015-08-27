@@ -45,7 +45,7 @@ namespace CPGuide
         {
             (MainSplitView.Content as Frame).Navigate(typeof(SecondPage));
             MainSplitView.IsPaneOpen = !MainSplitView.IsPaneOpen;
-            HamburgerList.SelectedItem = Microphone;
+            HamburgerList.SelectedItem = Map;
         }
     }
 }
