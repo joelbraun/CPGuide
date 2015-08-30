@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
 using Windows.Data.Json;
 using Windows.Storage;
@@ -115,15 +117,25 @@ namespace CPGuide.Data
             return null;
         }
 
+        public async Task<string> GetjsonStream()
+        {
+            HttpClient client = new HttpClient();
+            string url = "http://joelbraun.azurewebsites.net/IOT/SampleData.html";
+            HttpResponseMessage response = await client.GetAsync(url);
+            string content = await response.Content.ReadAsStringAsync();
+            Debug.WriteLine("Content: " + content);
+            return content;
+        }
+
         private async Task GetSampleDataAsync()
         {
             if (this._groups.Count != 0)
                 return;
 
-            Uri dataUri = new Uri("ms-appx:///DataModel/SampleData.json");
+            //Uri dataUri = new Uri("ms-appx://SampleData.json");
 
-            StorageFile file = await StorageFile.GetFileFromApplicationUriAsync(dataUri);
-            string jsonText = await FileIO.ReadTextAsync(file);
+            //StorageFile file = await StorageFile.GetFileFromApplicationUriAsync(dataUri);
+            string jsonText = await GetjsonStream();  //await FileIO.ReadTextAsync(file);
             JsonObject jsonObject = JsonObject.Parse(jsonText);
             JsonArray jsonArray = jsonObject["Groups"].GetArray();
 

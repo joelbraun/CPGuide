@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using CPGuide.Data;
 using CPGuide.Common;
+using Windows.ApplicationModel.Resources;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -26,12 +27,23 @@ namespace CPGuide
     {
         private NavigationHelper navigationHelper;
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
+        //private readonly ResourceLoader resourceLoader = ResourceLoader.GetForCurrentView("Resources");
 
         public MainPage(Frame frame)
         {
             this.InitializeComponent();
             MainSplitView.Content = frame;
             (MainSplitView.Content as Frame).Navigate(typeof(HomePage));
+            getData();
+
+
+            //this.navigationHelper.SaveState += this.NavigationHelper_SaveState;
+        }
+
+        private async void getData()
+        {
+            var sampleDataGroups = await SampleDataSource.GetGroupsAsync();
+            this.DefaultViewModel["Groups"] = sampleDataGroups;
         }
 
         public NavigationHelper NavigationHelper
@@ -49,22 +61,21 @@ namespace CPGuide
         {
             MainSplitView.IsPaneOpen = !MainSplitView.IsPaneOpen;
         }
-        /*
+        
         private void Item1Click(object sender, RoutedEventArgs e)
         {
             (MainSplitView.Content as Frame).Navigate(typeof(HomePage));
-            HamburgerList.SelectedItem = Home;
             MainSplitView.IsPaneOpen = !MainSplitView.IsPaneOpen;
         }
-
+        /*
         private void Item2Click(object sender, RoutedEventArgs e)
         {
             (MainSplitView.Content as Frame).Navigate(typeof(SecondPage));
             MainSplitView.IsPaneOpen = !MainSplitView.IsPaneOpen;
             HamburgerList.SelectedItem = Map;
         }
-        */
-
+        
+       
         void ItemView_ItemClick(object sender, ItemClickEventArgs e)
         {
             // Navigate to the appropriate destination page, configuring the new page
@@ -72,5 +83,7 @@ namespace CPGuide
             var itemId = ((SampleDataItem)e.ClickedItem).UniqueId;
             //this.Frame.Navigate(typeof(ItemPage), itemId);
         }
+        */
+
     }
 }

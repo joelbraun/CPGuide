@@ -13,21 +13,21 @@
             <StackPanel Background="Gray">
                 <Button x:Name="HamburgerButton" FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
                      Width="50" Height="50" Background="Transparent" Click="HamburgerButton_Click"/>
-                <ListView x:Name="HamburgerList" Foreground="White">
+                <ListView Padding="-12,0,0,0"  x:Name="HamburgerList" Foreground="White" DataContext="{Binding Groups[0]}" ItemsSource="{Binding Items}">
                     <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <StackPanel Orientation="Horizontal">
-                                <Button x:Name="MenuButton3" FontFamily="Segoe MDL2 Assets" Content="&#xE1D6;"
-                        Width="50" Height="50" Background="Transparent" Click="ItemView_ItemClick" />
-                                <TextBlock Text="Button 3" FontSize="18" VerticalAlignment="Center" />
+                        <DataTemplate x:Name="HamburgerItemTemplate">
+                            <StackPanel Orientation="Horizontal" Padding="0">
+                                <Button Margin="-0,0,0,0" x:Name="MenuButton3" FontFamily="Segoe MDL2 Assets" Content="&#xE1D6;"
+                        Width="50" Height="50" Background="Transparent"  />
+                                <TextBlock Text="{Binding Title}" FontSize="18" Foreground="Black" VerticalAlignment="Center" />
                             </StackPanel>
                         </DataTemplate>
                     </ListView.ItemTemplate>
+                    
                 </ListView>
             </StackPanel>
         </SplitView.Pane>
         <SplitView.Content>
-
             <Grid>
                 <TextBlock Text="SplitView Basic" FontSize="54" Foreground="Black"
                            HorizontalAlignment="Center" VerticalAlignment="Center"/>
