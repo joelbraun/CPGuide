@@ -1,0 +1,76 @@
+﻿{
+  "Items": [
+    {
+      "ID": "Map",
+      "Title": "Map"
+    },
+    {
+      "ID": "Portal",
+      "Title": "Portal"
+    },
+    {
+      "ID": "PolyCard",
+      "Title": "Poly Card"
+    },
+    {
+      "ID": "EscortVan",
+      "Title": "Escort Van"
+    },
+    {
+      "ID": "Dining",
+      "Title": "Dining"
+    },
+    {
+      "ID": "Recreation",
+      "Title": "Recreation"
+    },
+    {
+      "ID": "Safety",
+      "Title": "Safety"
+    },
+    {
+      "ID": "News",
+      "Title": "News"
+    },
+    {
+      "ID": "BikeRacks",
+      "Title": "Bike Racks"
+    },
+    {
+      "ID": "Events",
+      "Title": "Events"
+    },
+    {
+      "ID": "Admissions",
+      "Title": "Admissions"
+    },
+    {
+      "ID": "Athletics",
+      "Title": "Athletics"
+    },
+    {
+      "ID": "Directory",
+      "Title": "Directory"
+    },
+    {
+      "ID": "UniversityStore",
+      "Title": "University Store"
+    },
+    {
+      "ID": "CampusLife",
+      "Title": "Campus Life"
+    },
+    {
+      "ID": "Library",
+      "Title": "Library"
+    },
+    {
+      "ID": "PrintCopy",
+      "Title": "Print & Copy"
+    },
+        {
+      "ID": "MustangJobs",
+      "Title": "Mustang Jobs"
+    }
+  ]
+}
