@@ -14,7 +14,9 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using CPGuide.Data;
 using CPGuide.Common;
+using CPGuide.DataModel;
 using Windows.ApplicationModel.Resources;
+using System.Collections.ObjectModel;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -26,7 +28,7 @@ namespace CPGuide
     public sealed partial class MainPage : Page
     {
         private NavigationHelper navigationHelper;
-        private ObservableDictionary defaultViewModel = new ObservableDictionary();
+        private ObservableCollection<CPDataItem> defaultViewModel = new ObservableCollection<CPDataItem>();
         //private readonly ResourceLoader resourceLoader = ResourceLoader.GetForCurrentView("Resources");
 
         public MainPage(Frame frame)
@@ -42,16 +44,12 @@ namespace CPGuide
 
         private async void getData()
         {
-            var sampleDataGroups = await SampleDataSource.GetGroupsAsync();
-            this.DefaultViewModel["Groups"] = sampleDataGroups;
+            var cpDataItems = await CPDataSource.GetItemsAsync();
+
+            this.defaultViewModel = cpDataItems as ObservableCollection<CPDataItem>;
         }
 
-        public NavigationHelper NavigationHelper
-        {
-            get { return this.navigationHelper; }
-        }
-
-        public ObservableDictionary DefaultViewModel
+        public ObservableCollection<CPDataItem> DefaultViewModel
         {
             get { return this.defaultViewModel; }
         }

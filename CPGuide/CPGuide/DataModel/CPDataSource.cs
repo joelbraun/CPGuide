@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,18 +30,26 @@ namespace CPGuide.DataModel
     public sealed class CPDataSource
     {
         private static CPDataSource _cpDataSource = new CPDataSource();
-        private ObservableCollectio<CPDataItem> _items = new ObservableCollectio<CPDataItem>();
+        private ObservableCollection<CPDataItem> _items = new ObservableCollection<CPDataItem>();
         public ObservableCollection<CPDataItem> Items
         {
             get { return this._items; }
         }
-/*
-       private async Task<string> GetjsonStream()
+        /*
+               private async Task<string> GetjsonStream()
+                {
+                    string url = "";
+                    Http
+                }
+                */
+
+        public static async Task<IEnumerable<CPDataItem>> GetItemsAsync()
         {
-            string url = "";
-            Http
+            await _cpDataSource.GetSampleDataAsync();
+
+            return _cpDataSource.Items;
+
         }
-        */
 
         private async Task GetSampleDataAsync()
         {
