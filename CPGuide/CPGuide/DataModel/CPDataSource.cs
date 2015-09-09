@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.Data.Json;
 using Windows.Storage;
+using System.Net.Http;
 
 namespace CPGuide.DataModel
 {
@@ -45,22 +46,22 @@ namespace CPGuide.DataModel
 
         public static async Task<IEnumerable<CPDataItem>> GetItemsAsync()
         {
-            await _cpDataSource.GetSampleDataAsync();
+            await _cpDataSource.GetCPDataAsync();
 
             return _cpDataSource.Items;
 
         }
 
-        private async Task GetSampleDataAsync()
+        private async Task GetCPDataAsync()
         {
             if (this._items.Count != 0)
             {
                 return;
             }
 
-            Uri dataUri = new Uri("ms-appx:///CPData.json");
-            StorageFile file = await StorageFile.GetFileFromApplicationUriAsync(dataUri);
-            string jsonText = await FileIO.ReadTextAsync(file);
+            //Uri dataUri = new Uri("ms-appx:///CPData.json");
+            //StorageFile file = await StorageFile.GetFileFromApplicationUriAsync(dataUri);
+            string jsonText = await GetjsonStream();  //FileIO.ReadTextAsync(file);
             JsonObject jsonObject = JsonObject.Parse(jsonText);
             JsonArray jsonArray = jsonObject["Items"].GetArray();
 
@@ -71,5 +72,15 @@ namespace CPGuide.DataModel
             }
 
         }
+
+        public async Task<string> GetjsonStream()
+        {
+            HttpClient client = new HttpClient();
+            string url = "http://joelbraun.azurewebsites.net/IOT/CPData.html";
+            HttpResponseMessage response = await client.GetAsync(url);
+            string content = await response.Content.ReadAsStringAsync();
+            return content;
+        }
+
     }
 }
