@@ -30,9 +30,8 @@ namespace CPGuide
     {
         private ObservableCollection<CPDataItem> defaultViewModel = new ObservableCollection<CPDataItem>();
         //private readonly ResourceLoader resourceLoader = ResourceLoader.GetForCurrentView("Resources");
-        private 
 
-         MainPage(Frame frame)
+        public MainPage(Frame frame)
         {
             this.InitializeComponent();
             MainSplitView.Content = frame;
@@ -47,7 +46,7 @@ namespace CPGuide
          ICommand HamburgerListItemCommand
         {
             get;
-            private set;
+            set;
         }
 
         private async void getData()
