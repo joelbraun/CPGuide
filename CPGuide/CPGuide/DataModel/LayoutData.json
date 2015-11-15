@@ -1,0 +1,93 @@
+﻿{
+  "Data": [
+    "Cal Poly"
+    :
+    [
+      {
+        "ID": "News",
+        "Title": "News"
+      }
+    ],
+    "Getting Around"
+    :
+    [
+      {
+        "ID": "Map",
+        "Title": "Map"
+      },
+      {
+        "ID": "BikeRacks",
+        "Title": "Bike Racks"
+      },
+      {
+        "ID": "EscortVan",
+        "Title": "Escort Van"
+      }
+    ],
+    "Events"
+    :
+    [
+      {
+        "ID": "Events",
+        "Title": "Events"
+      },
+      {
+        "ID": "Athletics",
+        "Title": "Athletics"
+      },
+      {
+        "ID": "CampusLife",
+        "Title": "Campus Life"
+      }
+    ],
+    "Campus Life"
+    :
+    [
+      {
+        "ID": "Dining",
+        "Title": "Dining"
+      },
+      {
+        "ID": "Library",
+        "Title": "Library"
+      },
+      {
+        "ID": "PrintCopy",
+        "Title": "Print & Copy"
+      },
+      {
+        "ID": "Recreation",
+        "Title": "Recreation"
+      },
+      {
+        "ID": "Safety",
+        "Title": "Safety"
+      },
+      {
+        "ID": "UniversityStore",
+        "Title": "University Store"
+      }
+
+    ],
+    "Resources"
+    :
+    [
+      {
+        "ID": "Portal",
+        "Title": "Portal"
+      },
+      {
+        "ID": "PolyCard",
+        "Title": "Poly Card"
+      },
+      {
+        "ID": "Directory",
+        "Title": "Directory"
+      },
+      {
+        "ID": "MustangJobs",
+        "Title": "Mustang Jobs"
+      }
+    ]
+} ]
+}

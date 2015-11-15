@@ -107,6 +107,7 @@
     <Compile Include="Common\RelayCommand.cs" />
     <Compile Include="Common\SuspensionManager.cs" />
     <Compile Include="DataModel\CPDataSource.cs" />
+    <Compile Include="DataModel\LayoutDataSource.cs" />
     <Compile Include="DataModel\SampleDataSource.cs" />
     <Compile Include="HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
@@ -129,6 +130,7 @@
     <None Include="CPGuide_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="DataModel\LayoutData.json" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />

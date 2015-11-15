@@ -1,10 +1,7 @@
-{"Groups":[
+{"Data":[
   {
-    "UniqueId": "Group-1",
-    "Title": "Group Title: 1",
-    "Subtitle": "Group subtitle: 1",
-    "ImagePath": "Assets/DarkGray.png",
-    "Description" : "Group Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor scelerisque lorem in vehicula. Aliquam tincidunt, lacus ut sagittis tristique, turpis massa volutpat augue, eu rutrum ligula ante a ante",
+    "UniqueId": "GettingAround",
+    "Title": "Getting Around",
     "Items":
     [
       {
