@@ -33,15 +33,17 @@ namespace CPGuide.DataModel
 
     public class LayoutDataGroup
     {
-        public LayoutDataGroup(String uniqueId, String title)
+        public LayoutDataGroup(String uniqueId, String icon, String title)
         {
             this.UniqueId = uniqueId;
             this.Title = title;
+            this.Icon = icon;
             this.Items = new ObservableCollection<LayoutDataItem>();
         }
 
         public string UniqueId { get; private set; }
         public string Title { get; private set; }
+        public string Icon { get; private set; }
         public ObservableCollection<LayoutDataItem> Items { get; private set; }
 
         public override string ToString()
@@ -101,6 +103,7 @@ namespace CPGuide.DataModel
             {
                 JsonObject groupObject = groupValue.GetObject();
                 LayoutDataGroup group = new LayoutDataGroup(groupObject["UniqueId"].GetString(),
+                                                            groupObject["Icon"].GetString(),
                                                             groupObject["Title"].GetString());
 
                 foreach (JsonValue itemValue in groupObject["Items"].GetArray())

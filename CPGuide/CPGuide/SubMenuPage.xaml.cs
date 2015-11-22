@@ -51,6 +51,10 @@ namespace CPGuide
             {
                 (App.MSV.Content as Frame).Navigate(typeof(WebViewPage), toNav.Data);
             }
+            if (toNav.PageType == "Map")
+            {
+                (App.MSV.Content as Frame).Navigate(typeof(MapsPage));
+            }
        }
     }
 }

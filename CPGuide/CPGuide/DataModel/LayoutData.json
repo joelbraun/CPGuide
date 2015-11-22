@@ -2,6 +2,7 @@
   {
     "UniqueId": "GettingAround",
     "Title": "Getting Around",
+    "Icon":  "&#xE707",
     "Items":
     [
       {
@@ -27,6 +28,7 @@
   {
     "UniqueId": "Events",
     "Title": "Events",
+    "Icon":  "&#xE787;",
     "Items":
     [
       {
@@ -46,6 +48,7 @@
   {
     "UniqueId": "CampusLife",
     "Title": "Campus Life",
+    "Icon":  "&#xE8AB;",
     "Items":
     [
       {
@@ -90,6 +93,7 @@
   {
     "UniqueId": "Resources",
     "Title": "Resources",
+    "Icon" :  "&x#E774;",
     "Items":
     [
       {

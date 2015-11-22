@@ -1,0 +1,72 @@
+﻿{"MapData":[
+  {
+    "UniqueId": "Buildings",
+    "Items": [
+      {
+        "UniqueId": "Map",
+        "Title": "Map",
+        "Latitude": 1.0,
+        "Longitude": 1.0
+      },
+      {
+        "UniqueId": "Map",
+        "Title": "Map",
+        "Latitude": 1.0,
+        "Longitude": 1.0
+      },
+      {
+        "UniqueId": "Map",
+        "Title": "Map",
+        "Latitude": 1.0,
+        "Longitude": 1.0
+      }
+    ]
+  },
+  {
+    "UniqueId": "BikeRacks",
+    "Items": [
+      {
+        "UniqueId": "Map",
+        "Title": "Map",
+        "Latitude": 1.0,
+        "Longitude": 1.0
+      },
+      {
+        "UniqueId": "Map",
+        "Title": "Map",
+        "Latitude": 1.0,
+        "Longitude": 1.0
+      },
+      {
+        "UniqueId": "Map",
+        "Title": "Map",
+        "Latitude": 1.0,
+        "Longitude": 1.0
+      }
+    ]
+  },
+  {
+    "UniqueId": "EscortVan",
+    "Items": [
+      {
+        "UniqueId": "Map",
+        "Title": "Map",
+        "Latitude": 1.0,
+        "Longitude": 1.0
+      },
+      {
+        "UniqueId": "Map",
+        "Title": "Map",
+        "Latitude": 1.0,
+        "Longitude": 1.0
+      },
+      {
+        "UniqueId": "Map",
+        "Title": "Map",
+        "Latitude": 1.0,
+        "Longitude": 1.0
+      }
+    ]
+  }
+    ]
+  }

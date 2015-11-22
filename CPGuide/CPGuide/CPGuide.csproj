@@ -93,6 +93,9 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="DataModel\MapData.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="DataModel\SampleData.json" />
     <None Include="LayoutData.json" />
     <None Include="project.json" />
@@ -106,6 +109,7 @@
     <Compile Include="Common\ObservableDictionary.cs" />
     <Compile Include="Common\RelayCommand.cs" />
     <Compile Include="Common\SuspensionManager.cs" />
+    <Compile Include="DataModel\DiningData.cs" />
     <Compile Include="DataModel\LayoutDataSource.cs" />
     <Compile Include="DataModel\MapDataSource.cs" />
     <Compile Include="DataModel\SampleDataSource.cs" />
@@ -114,6 +118,9 @@
     </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MapsPage.xaml.cs">
+      <DependentUpon>MapsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SecondPage.xaml.cs">
@@ -157,6 +164,10 @@
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MapsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SecondPage.xaml">
       <SubType>Designer</SubType>

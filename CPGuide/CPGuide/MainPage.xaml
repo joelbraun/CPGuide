@@ -10,14 +10,14 @@
 
     <SplitView x:Name="MainSplitView" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="50" OpenPaneLength="225">
         <SplitView.Pane>
-            <StackPanel Background="Gray" Name="Root">
+            <StackPanel Background="Black" Name="Root">
                 <Button x:Name="HamburgerButton" FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
                      Width="50" Height="50" Background="Transparent" Click="HamburgerButton_Click"/>
                 <ListView  Padding="-12,0,0,0"  x:Name="HamburgerList" Foreground="White" IsItemClickEnabled="True" ItemClick="HamburgerList_ItemClick" HorizontalAlignment="Right" Width="225">
                     <ListView.ItemTemplate>
                         <DataTemplate x:Name="HamburgerItemTemplate">
                             <StackPanel Orientation="Horizontal" Padding="0">
-                                <Button Margin="-0,0,0,0"  FontFamily="Segoe MDL2 Assets" Command="{Binding ElementName=Root, Path=DataContext.HamburgerListItemCommand}" CommandParameter="{Binding}" Content="&#xE1D6;"  Width="50" Height="50" Background="Transparent" x:Name="HamburgerButton" />
+                                <Button Margin="-0,0,0,0"  FontFamily="Segoe MDL2 Assets" Command="{Binding ElementName=Root, Path=DataContext.HamburgerListItemCommand}" CommandParameter="{Binding}" Content="{Binding Icon}"  Width="50" Height="50" Background="Transparent" x:Name="HamburgerButton" />
                                 <TextBlock x:Name="HamburgerText" Text="{Binding Title}" FontSize="18" Foreground="Black" VerticalAlignment="Center" />
                             </StackPanel>
                         </DataTemplate>
