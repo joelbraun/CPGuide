@@ -28,7 +28,7 @@ namespace CPGuide
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        private ObservableCollection<CPDataItem> defaultViewModel = new ObservableCollection<CPDataItem>();
+        private ObservableCollection<LayoutDataGroup> defaultViewModel = new ObservableCollection<LayoutDataGroup>();
         //private readonly ResourceLoader resourceLoader = ResourceLoader.GetForCurrentView("Resources");
 
         public MainPage(Frame frame)
@@ -51,16 +51,16 @@ namespace CPGuide
 
         private async void getData()
         {
-            var cpDataItems = await CPDataSource.GetItemsAsync();
+            var cpDataGroups = await LayoutDataSource.GetGroupsAsync();
 
-            foreach (CPDataItem c in cpDataItems)
+            foreach (LayoutDataGroup c in cpDataGroups)
             {
                 this.defaultViewModel.Add(c);
             }
             
         }
 
-        public ObservableCollection<CPDataItem> DefaultViewModel
+        public ObservableCollection<LayoutDataGroup> DefaultViewModel
         {
             get { return this.defaultViewModel; }
         }
@@ -84,13 +84,13 @@ namespace CPGuide
 
         private void HamburgerListButtonClick(object parameter)
         {
-            CPDataItem item = parameter as CPDataItem;
+            LayoutDataGroup item = parameter as LayoutDataGroup;
             int index = DefaultViewModel.IndexOf(item);
             HamburgerList.SelectedIndex = index;
             MainSplitView.Content = new WebViewPage(DetermineURI(item));
         }
 
-        private Uri DetermineURI(CPDataItem parameter)
+        private Uri DetermineURI(LayoutDataGroup parameter)
         {
             if (parameter != null)
             {

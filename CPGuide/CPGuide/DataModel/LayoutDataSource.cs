@@ -86,12 +86,12 @@ namespace CPGuide.DataModel
             if (this._groups.Count != 0)
                 return;
 
-            Uri dataUri = new Uri("ms-appx://SampleData.json");
+            Uri dataUri = new Uri("ms-appx:///DataModel/LayoutData.json");
 
             StorageFile file = await StorageFile.GetFileFromApplicationUriAsync(dataUri);
             string jsonText = await FileIO.ReadTextAsync(file);
             JsonObject jsonObject = JsonObject.Parse(jsonText);
-            JsonArray jsonArray = jsonObject["Groups"].GetArray();
+            JsonArray jsonArray = jsonObject["Data"].GetArray();
 
             foreach (JsonValue groupValue in jsonArray)
             {

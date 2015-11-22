@@ -5,15 +5,15 @@
     "Items":
     [
       {
-        "UniqueId": "Map",
+        "ID": "Map",
         "Title": "Map"
       },
       {
-        "UniqueId": "BikeRacks",
+        "ID": "BikeRacks",
         "Title": "Bike Racks"
       },
       {
-        "UniqueId": "EscortVan",
+        "ID": "EscortVan",
         "Title": "Escort Van"
       }
     ]
@@ -28,7 +28,7 @@
         "Title": "CampusEvents"
       },
       {
-        "UniqueId": "Athletics",
+        "ID": "Athletics",
         "Title": "Athletics"
       }
     ]
@@ -39,27 +39,27 @@
     "Items":
     [
       {
-        "UniqueId": "Dining",
+        "ID": "Dining",
         "Title": "Dining"
       },
       {
-        "UniqueId": "Library",
+        "ID": "Library",
         "Title": "Library"
       },
       {
-        "UniqueId": "PrintCopy",
+        "ID": "PrintCopy",
         "Title": "Print & Copy"
       },
       {
-        "UniqueId": "Recreation",
+        "ID": "Recreation",
         "Title": "Recreation"
       },
       {
-        "UniqueId": "Safety",
+        "ID": "Safety",
         "Title": "Safety"
       },
       {
-        "UniqueId": "UniversityStore",
+        "ID": "UniversityStore",
         "Title": "University Store"
       }
     ]
@@ -70,19 +70,19 @@
     "Items":
     [
            {
-        "UniqueId": "Portal",
+        "ID": "Portal",
         "Title": "Portal"
       },
       {
-        "UniqueId": "PolyCard",
+        "ID": "PolyCard",
         "Title": "Poly Card"
       },
       {
-        "UniqueId": "Directory",
+        "ID": "Directory",
         "Title": "Directory"
       },
       {
-        "UniqueId": "MustangJobs",
+        "ID": "MustangJobs",
         "Title": "Mustang Jobs"
       }
     ]

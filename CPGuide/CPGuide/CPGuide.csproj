@@ -95,6 +95,7 @@
     </Content>
     <None Include="DataModel\CPData.json" />
     <None Include="DataModel\SampleData.json" />
+    <None Include="LayoutData.json" />
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
@@ -130,7 +131,9 @@
     <None Include="CPGuide_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="DataModel\LayoutData.json" />
+    <Content Include="DataModel\LayoutData.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
