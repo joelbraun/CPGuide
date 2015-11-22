@@ -35,18 +35,17 @@ namespace CPGuide
         {
             this.InitializeComponent();
             MainSplitView.Content = frame;
+            App.MSV = MainSplitView;
             (MainSplitView.Content as Frame).Navigate(typeof(HomePage));
             getData();
-            HamburgerList.ItemsSource = defaultViewModel;
+            HamburgerList.ItemsSource = DefaultViewModel;
             HamburgerListItemCommand = new Command<object>(HamburgerListButtonClick);
-
-            //this.navigationHelper.SaveState += this.NavigationHelper_SaveState;
         }
 
-         ICommand HamburgerListItemCommand
+        public ICommand HamburgerListItemCommand
         {
             get;
-            set;
+            private set;
         }
 
         private async void getData()
@@ -55,7 +54,7 @@ namespace CPGuide
 
             foreach (LayoutDataGroup c in cpDataGroups)
             {
-                this.defaultViewModel.Add(c);
+                DefaultViewModel.Add(c);
             }
             
         }
@@ -71,8 +70,11 @@ namespace CPGuide
             MainSplitView.IsPaneOpen = !MainSplitView.IsPaneOpen;
         }
 
-        private void HamburgerList_ItemClick(object sender, RoutedEventArgs e)
+        private void HamburgerList_ItemClick(object sender, ItemClickEventArgs e)
         {
+            LayoutDataGroup item = e.ClickedItem as LayoutDataGroup;
+            App.LDG = item;
+            (MainSplitView.Content as Frame).Navigate(typeof(SubMenuPage), item);
 
         }
         
@@ -82,25 +84,15 @@ namespace CPGuide
             MainSplitView.IsPaneOpen = !MainSplitView.IsPaneOpen;
         }
 
-        private void HamburgerListButtonClick(object parameter)
+        public void HamburgerListButtonClick(object parameter)
         {
             LayoutDataGroup item = parameter as LayoutDataGroup;
             int index = DefaultViewModel.IndexOf(item);
             HamburgerList.SelectedIndex = index;
-            MainSplitView.Content = new WebViewPage(DetermineURI(item));
+            App.LDG = item;
+            (MainSplitView.Content as Frame).Navigate(typeof(SubMenuPage), item);
         }
 
-        private Uri DetermineURI(LayoutDataGroup parameter)
-        {
-            if (parameter != null)
-            {
-                return new Uri("http://microsoft.com");
-            }
-            else
-            {
-                return new Uri("http://google.com");
-            }
-        }
 
         /*
         private void Item2Click(object sender, RoutedEventArgs e)

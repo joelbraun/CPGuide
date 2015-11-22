@@ -25,12 +25,13 @@ namespace CPGuide
         public WebViewPage()
         {
             this.InitializeComponent();
+
         }
 
-        public WebViewPage(Uri uri)
+        protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            this.InitializeComponent();
-            MainWebView.Navigate(uri);
+            base.OnNavigatedTo(e);
+            MainWebView.Navigate(new Uri(e.Parameter as String));
         }
     }
 }

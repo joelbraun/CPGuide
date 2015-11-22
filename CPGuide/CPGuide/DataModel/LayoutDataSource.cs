@@ -12,14 +12,18 @@ namespace CPGuide.DataModel
 {
     public class LayoutDataItem
     {
-        public LayoutDataItem(String uniqueId, String title)
+        public LayoutDataItem(String uniqueId, String title, String pageType, String data)
         {
             this.UniqueId = uniqueId;
             this.Title = title;
+            this.PageType = pageType;
+            this.Data = data;
         }
 
         public string UniqueId { get; private set; }
         public string Title { get; private set; }
+        public string PageType { get; private set; }
+        public string Data { get; set; }
 
         public override string ToString()
         {
@@ -103,7 +107,9 @@ namespace CPGuide.DataModel
                 {
                     JsonObject itemObject = itemValue.GetObject();
                     group.Items.Add(new LayoutDataItem(itemObject["UniqueId"].GetString(),
-                                                       itemObject["Title"].GetString()));
+                                                       itemObject["Title"].GetString(), 
+                                                       itemObject["PageType"].GetString(),
+                                                       itemObject["Data"].GetString()));
                 }
                 this.Groups.Add(group);
             }

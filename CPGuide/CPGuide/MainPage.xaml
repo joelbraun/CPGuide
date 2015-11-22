@@ -13,7 +13,7 @@
             <StackPanel Background="Gray" Name="Root">
                 <Button x:Name="HamburgerButton" FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
                      Width="50" Height="50" Background="Transparent" Click="HamburgerButton_Click"/>
-                <ListView  Padding="-12,0,0,0"  x:Name="HamburgerList" Foreground="White" IsItemClickEnabled="True"  ItemClick="HamburgerList_ItemClick">
+                <ListView  Padding="-12,0,0,0"  x:Name="HamburgerList" Foreground="White" IsItemClickEnabled="True" ItemClick="HamburgerList_ItemClick" HorizontalAlignment="Right" Width="225">
                     <ListView.ItemTemplate>
                         <DataTemplate x:Name="HamburgerItemTemplate">
                             <StackPanel Orientation="Horizontal" Padding="0">

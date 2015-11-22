@@ -6,15 +6,21 @@
     [
       {
         "UniqueId": "Map",
-        "Title": "Map"
+        "Title": "Map",
+        "PageType": "Map",
+        "Data": "Buildings"
       },
       {
         "UniqueId": "BikeRacks",
-        "Title": "Bike Racks"
+        "Title": "Bike Racks",
+        "PageType": "Map",
+        "Data":  "BikeRacks"
       },
       {
         "UniqueId": "EscortVan",
-        "Title": "Escort Van"
+        "Title": "Escort Van",
+        "PageType": "Map",
+        "Data":  "EscortVan"
       }
     ]
   },
@@ -25,11 +31,15 @@
     [
       {
         "UniqueId": "CampusEvents",
-        "Title": "CampusEvents"
+        "Title": "CampusEvents",
+        "PageType": "Events",
+        "Data": "CampusEvents"
       },
       {
         "UniqueId": "Athletics",
-        "Title": "Athletics"
+        "Title": "Athletics",
+        "PageType": "Athletics",
+        "Data":  "Athletics"
       }
     ]
   },
@@ -40,27 +50,40 @@
     [
       {
         "UniqueId": "Dining",
-        "Title": "Dining"
+        "Title": "Dining",
+        "PageType": "Dining",
+        "Data" :  "Dining"
       },
       {
         "UniqueId": "Library",
-        "Title": "Library"
+        "Title": "Library",
+        "PageType": "Web",
+        "Data":  "http://lib.calpoly.edu"
       },
       {
         "UniqueId": "PrintCopy",
-        "Title": "Print & Copy"
+        "Title": "Print & Copy",
+        "PageType": "Web",
+        "Data" :  "http://calpolyprintcopy.com/"
       },
       {
         "UniqueId": "Recreation",
-        "Title": "Recreation"
+        "Title": "Recreation",
+        "PageType": "Web",
+        "Data":  "http://www.asi.calpoly.edu/recreation_center"
       },
       {
         "UniqueId": "Safety",
-        "Title": "Safety"
+        "Title": "Safety",
+        "PageType": "Safety",
+        "Data": "Safety"
       },
       {
         "UniqueId": "UniversityStore",
-        "Title": "University Store"
+        "Title": "University Store",
+        "PageType": "Web",
+        "Data":  "http://calpolystore.com/home.aspx"
+
       }
     ]
   },
@@ -69,21 +92,23 @@
     "Title": "Resources",
     "Items":
     [
-           {
+      {
         "UniqueId": "Portal",
-        "Title": "Portal"
+        "Title": "Portal",
+        "PageType": "Web",
+        "Data":  "http://my.calpoly.edu"
       },
       {
         "UniqueId": "PolyCard",
-        "Title": "Poly Card"
-      },
-      {
-        "UniqueId": "Directory",
-        "Title": "Directory"
+        "Title": "Poly Card",
+        "PageType": "Web",
+        "Data" :  "http://polycard.calpoly.edu"
       },
       {
         "UniqueId": "MustangJobs",
-        "Title": "Mustang Jobs"
+        "Title": "Mustang Jobs",
+        "PageType": "Web",
+        "Data" :  "https://calpoly-csm.symplicity.com/students/"
       }
     ]
   }
