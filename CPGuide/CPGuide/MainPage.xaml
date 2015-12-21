@@ -6,19 +6,20 @@
     xmlns:local="using:CPGuide"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    RequestedTheme="Light">
 
-    <SplitView x:Name="MainSplitView" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="50" OpenPaneLength="225">
+    <SplitView x:Name="MainSplitView" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="50" OpenPaneLength="250">
         <SplitView.Pane>
-            <StackPanel Background="Black" Name="Root">
-                <Button x:Name="HamburgerButton" FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
-                     Width="50" Height="50" Background="Transparent" Click="HamburgerButton_Click"/>
-                <ListView  Padding="-12,0,0,0"  x:Name="HamburgerList" Foreground="White" IsItemClickEnabled="True" ItemClick="HamburgerList_ItemClick" HorizontalAlignment="Right" Width="225">
+            <StackPanel Background="#2B2B2B" Name="Root">
+                <Button x:Name="HamburgerButton" Background="ForestGreen" FontFamily="Segoe MDL2 Assets" Foreground="White" Content="&#xE700;"
+                     Width="50" Height="50" Click="HamburgerButton_Click"/>
+                <ListView  Padding="-12,0,0,0"  x:Name="HamburgerList" Foreground="White" IsItemClickEnabled="True" ItemClick="HamburgerList_ItemClick" HorizontalAlignment="Right" Width="250">
                     <ListView.ItemTemplate>
                         <DataTemplate x:Name="HamburgerItemTemplate">
                             <StackPanel Orientation="Horizontal" Padding="0">
-                                <Button Margin="-0,0,0,0"  FontFamily="Segoe MDL2 Assets" Command="{Binding ElementName=Root, Path=DataContext.HamburgerListItemCommand}" CommandParameter="{Binding}" Content="{Binding Icon}"  Width="50" Height="50" Background="Transparent" x:Name="HamburgerButton" />
-                                <TextBlock x:Name="HamburgerText" Text="{Binding Title}" FontSize="18" Foreground="Black" VerticalAlignment="Center" />
+                                <Button Margin="-0,0,0,0" BorderThickness="0" Foreground="White" FontFamily="Segoe MDL2 Assets" Command="{Binding ElementName=Root, Path=DataContext.HamburgerListItemCommand}" CommandParameter="{Binding}" Content="{Binding Icon}"  Width="50" Height="50" Background="Transparent" x:Name="HamburgerButton" />
+                                <TextBlock x:Name="HamburgerText" Text="{Binding Title}" FontSize="18" Foreground="White" VerticalAlignment="Center" />
                             </StackPanel>
                         </DataTemplate>
                     </ListView.ItemTemplate>

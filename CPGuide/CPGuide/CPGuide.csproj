@@ -113,6 +113,9 @@
     <Compile Include="DataModel\LayoutDataSource.cs" />
     <Compile Include="DataModel\MapDataSource.cs" />
     <Compile Include="DataModel\SampleDataSource.cs" />
+    <Compile Include="DiningPage.xaml.cs">
+      <DependentUpon>DiningPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
@@ -157,6 +160,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="DiningPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="HomePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

@@ -73,8 +73,15 @@ namespace CPGuide
         private void HamburgerList_ItemClick(object sender, ItemClickEventArgs e)
         {
             LayoutDataGroup item = e.ClickedItem as LayoutDataGroup;
-            App.LDG = item;
-            (MainSplitView.Content as Frame).Navigate(typeof(SubMenuPage), item);
+            if (item.Title == "Home")
+            {
+                (MainSplitView.Content as Frame).Navigate(typeof(MainPage));
+            }
+            else
+            {
+                App.LDG = item;
+                (MainSplitView.Content as Frame).Navigate(typeof(SubMenuPage), item);
+            }
 
         }
         
